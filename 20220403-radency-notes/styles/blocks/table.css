@@ -1,0 +1,59 @@
+.table {
+  inline-size: 100%;
+
+  border-collapse: collapse;
+}
+
+.table__row {
+  background: #E8EAF5;
+
+  border-block-end: 10px solid #fff;
+}
+
+.table__row--title {
+  color: #fff;
+  
+  background: #999999;
+}
+
+.table__cell {
+  padding: 10px;
+  
+  text-align: start;
+}
+
+.table__cell--buttons {
+  min-width: 120px;
+}
+
+.table__icon {
+  position: relative;
+  
+  display: block;
+  inline-size: 30px;
+  block-size: 30px;
+  margin-block: auto;
+
+  background-color: #616161;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  
+  border-radius: 50%;
+}
+
+.table__icon--task {
+  background-image: url("../../img/cart.svg");
+}
+
+.table__icon--thought {
+  background-image: url("../../img/thought.svg");
+}
+
+.table__icon--idea {
+  background-image: url("../../img/idea.svg");
+}
+
+.table__icon--quote {
+  background-image: url("../../img/quotes.svg");
+}

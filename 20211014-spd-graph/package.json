@@ -1,0 +1,13 @@
+{
+  "name": "hw_03_object_array",
+  "version": "1.0.0",
+  "description": "Дано результати зарплатного опитування DOU.ua",
+  "main": "2021_june_raw.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "hw_04_fp",
+  "version": "1.0.0",
+  "description": "Дано дерево наступної структури: ```    Node = {        values: number[],        children: Node[]    } ```",
+  "main": "task_01.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

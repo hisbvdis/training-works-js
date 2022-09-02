@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="js/script.js" type="module"></script>
+  <title>Task1</title>
+</head>
+<body>
+
+
+<!-- Table: Notes -->
+<section>
+  <h3>Active notes</h3>
+  <table class="table">
+    <thead>
+      <tr class="table__row  table__row--title">
+        <th></th>
+        <th class="table__cell  table__cell--title">Name</th>
+        <th class="table__cell  table__cell--title">Created</th>
+        <th class="table__cell  table__cell--title">Category</th>
+        <th class="table__cell  table__cell--title">Content</th>
+        <th class="table__cell  table__cell--title">Dates</th>
+        <th class="table__cell  table__cell--title">Actions</th>
+      </tr>
+    </thead>
+    <tbody data-js="notesList"></tbody>
+  </table>
+  <button type="button" data-js="createBtn" data-target-modal-id="modal" aria-haspopup="true">Create Note</button>
+  <button type="button" data-modal-opener data-target-modal-id="archiveModal" aria-haspopup="true">Archive</button>
+</section>
+
+
+<!-- Table: Statistic -->
+<section>
+  <h3>Statistic</h3>
+  <table class="table">
+    <thead>
+      <tr class="table__row  table__row--title">
+        <td></td>
+        <td class="table__cell  table__cell--title">Note Category</td>
+        <td class="table__cell  table__cell--title">Active</td>
+        <td class="table__cell  table__cell--title">Archived</td>
+      </tr>
+    </thead>
+    <tbody data-js="statList"></tbody>
+  </table>
+</section>
+
+
+<!-- Modal / Form -->
+<section class="modal" id="modal" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+  <div class="modal__content">
+    <form class="form" data-js="form" aria-labelledby="modal-title">
+      <h3 class="form__title" id="modal-title">Create Note</h3>
+      <div class="form__field">
+        <label for="note-name">Name</label>
+        <input class="form__input" id="note-name" type="text" name="name" />
+      </div>
+      <div class="form__field">
+        <label for="note-category">Category</label>
+        <select class="form__input" id="note-category" name="category" data-js="categorySelect">
+        </select>
+      </div>
+      <div class="form__field">
+        <label for="note-content">Content</label>
+        <textarea class="form__input" id="note-content" name="content"></textarea>
+      </div>
+      <div hidden aria-hidden="true">
+        <input name="id" disabled />
+        <input name="date" disabled />
+        <input name="dates" disabled />
+        <input name="isArchived" value="false" disabled />
+      </div>
+      <div class="form__buttons">
+        <button type="submit" data-ctrl-enter-btn>Apply</button>
+        <button type="button" data-close-btn>Cancel</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Modal / Archive -->
+<section class="modal" id="archiveModal" aria-modal="true" role="dialog">
+  <div class="modal__content">
+    <table class="table">
+      <thead>
+        <tr class="table__row  table__row--title">
+          <td></td>
+          <td class="table__cell  table__cell--title">Name</td>
+          <td class="table__cell  table__cell--title">Created</td>
+          <td class="table__cell  table__cell--title">Category</td>
+          <td class="table__cell  table__cell--title">Content</td>
+          <td class="table__cell  table__cell--title">Dates</td>
+          <td class="table__cell  table__cell--title">Actions</td>
+        </tr>
+      </thead>
+      <tbody data-js="archiveList"></tbody>
+    </table>
+    <button type="button" data-close-btn>Close</button>
+  </div>
+</section>
+
+
+<!-- Template: Note -->
+<template id="note-template">
+  <tr class="table__row"  data-js="tr" data-id="0">
+    <td class="table__cell">
+      <span class="table__icon  table__icon--task" data-js="noteIcon"></span>
+    </td>
+    <td class="table__cell" data-js="noteName">Empty task</td>
+    <td class="table__cell" data-js="noteDate">April 20, 2021</td>
+    <td class="table__cell" data-js="noteCat">Task</td>
+    <td class="table__cell" data-js="noteContent">Note content long</td>
+    <td class="table__cell" data-js="noteDates"></td>
+    <td class="table__cell  table__cell--buttons">
+      <button class="btn" type="button" data-js="editBtn">
+        <span class="srOnly">Edit note</span>
+        <img class="btn__icon" src="./img/pencil.svg" aria-hidden="true"/>
+      </button>
+      <button class="btn" type="button" data-js="archiveBtn">
+        <span class="srOnly">Archive note</span>
+        <img class="btn__icon" src="./img/archive.svg" aria-hidden="true"/>
+      </button>
+      <button class="btn" type="button" data-js="removeBtn">
+        <span class="srOnly">Remove note</span>
+        <img class="btn__icon" src="./img/trash.svg" aria-hidden="true"/>
+      </button>
+    </td>
+  </tr>
+</template>
+
+
+<!-- Template: Statistic category -->
+<template id="category-template">
+  <tr class="table__row">
+    <td class="table__cell">
+      <span class="table__icon  table__icon--task" data-js="catIcon"></span>
+    </td>
+    <td class="table__cell" data-js="catName">Category Name</td>
+    <td class="table__cell" data-js="active">0</td>
+    <td class="table__cell" data-js="archived">0</td>
+  </tr>
+</template>
+
+
+</body>
+</html>

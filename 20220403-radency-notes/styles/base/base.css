@@ -1,0 +1,19 @@
+/* Размер шрифта 1rem=1px */
+/* "rem" - если в браузере изменён размер шрифта по умолчанию, чтобы сохранялись пропорции */
+:root { font-size: 6.25% }
+/* body  { font-size: 16rem } */
+
+
+body {
+  min-inline-size: 320px;
+  padding: 10px;
+  
+  font-family: sans-serif;
+  font-size: 16rem;
+
+  overflow-y: scroll;
+}
+
+section {
+  margin-block-end: 50px;
+}
