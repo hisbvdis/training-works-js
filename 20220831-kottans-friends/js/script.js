@@ -1,69 +1,63 @@
 import { getUserList } from "./randomuser.service.js";
-const dataArr = await getUserList().then(data => data);
+const users = await getUserList();
 
 const listElem = document.querySelector("[data-user-list]");
 const searchElem = document.querySelector("[data-search-input]");
 const sortElem = document.querySelector("[data-sort-select]");
 const filtersFormElem = document.querySelector("[data-filters-form]");
 
-let urlSearchParams =
-  location.search === ""
-    ? {}
-    : location.search
-        .slice(1)
-        .split("&")
-        .map((item) => item.split("="))
-        .filter(([_, value]) => value !== "")
-        .reduce((accum, [key, value]) => ({ ...accum, [key]: value }), {});
+let urlSearchParams = new URLSearchParams(window.location.search);
 
-let searchValue = urlSearchParams.search || "";
+let searchValue = urlSearchParams.get("search") || "";
 searchElem.value = searchValue;
-let sortValue = urlSearchParams.sort || "default";
+let sortValue = urlSearchParams.get("sort") || "default";
 sortElem.value = sortValue;
-let genderValue = urlSearchParams.gender || "all";
+let genderValue = urlSearchParams.get("gender") || "all";
 filtersFormElem.gender.value = genderValue;
 
 searchElem.addEventListener("input", (evt) => {
   searchValue = evt.target.value;
-  urlSearchParams.search = searchValue;
+  urlSearchParams.set("search", searchValue);
   renderUserList();
 });
 
 sortElem.addEventListener("change", (evt) => {
   sortValue = evt.target.value;
-  urlSearchParams.sort = sortValue;
+  urlSearchParams.set("sort", sortValue);
   renderUserList();
 });
 
 filtersFormElem.addEventListener("change", (evt) => {
   if (evt.target.name !== "gender") return;
   genderValue = evt.target.value;
-  urlSearchParams.gender = genderValue;
+  urlSearchParams.set("gender", genderValue);
   renderUserList();
 })
 
-renderUserList("first");
+renderUserList(true);
 
-function renderUserList(mode) {
-  if (mode !== "first") {
+function renderUserList(isFirstRender = false) {
+  if (!isFirstRender) {
     updateURL();
   }
   
   listElem.innerHTML = "";
-  let newArr = dataArr;
+  let clonedUsers = users;
   
-  newArr = newArr.filter(({name}) => name.toLowerCase().includes(searchValue.toLowerCase()));
+  clonedUsers = clonedUsers.filter(({name}) => name.toLowerCase().includes(searchValue.toLowerCase()));
 
-  newArr = sortArray(newArr, sortValue);
+  clonedUsers = sortArray(clonedUsers, sortValue);
 
   if (genderValue !== "all") {
-    newArr = newArr.filter(({gender}) => gender === genderValue);
+    clonedUsers = clonedUsers.filter(({gender}) => gender === genderValue);
   }
 
-  newArr.forEach(({name, age, gender, photo, email, phone}) => {
-    listElem.insertAdjacentHTML(
-      "beforeend",
-      `
+  const fragment = new DocumentFragment();
+
+  clonedUsers.forEach(({name, age, gender, photo, email, phone}) => {
+    const listItem = document.createElement("li");
+
+    listItem.innerHTML = `
       <li class="users__item  user  ${gender === "female" && "user--female"}">
         <p class="user__name">${name}</p>
         <div class="user__info">
@@ -74,9 +68,12 @@ function renderUserList(mode) {
         </div>
         <p class="user__gender">${gender}</p>
       </li>
-    `
-    );
+    `;
+
+    fragment.append(listItem);
   })
+
+  listElem.append(fragment);
 }
 
 
@@ -112,9 +109,11 @@ function sortArray(arr, method) {
 
 
 function updateURL() {
-  const searchParams = Object.entries(urlSearchParams)
-    .map(([key, value]) => `${key}=${value}`)
-    .join("&");
+  let urlString = "?";
+  for (let [key, value] of urlSearchParams.entries()) {
+    urlString += `&${key}=${value}`;
+  }
+  
 
-  history.replaceState(null, null, `?${searchParams}`);
+  history.replaceState(null, null, urlString);
 }
