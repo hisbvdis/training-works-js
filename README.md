@@ -1,0 +1,18 @@
+# Training works — JS
+
+| Project name                | Description                                 | Code                                                                                        | Demo                                                                                       
+|-----------------------------|---------------------------------------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------
+| 20211014-spd-graph          | SPD University: Canvas + Работа с объектами | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20211014-spd-graph)          | —
+| 20211016-spd-trigonometry   | SPD University: Тригонометрия               | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20211016-spd-trigonometry)   | [Demo](https://hisbvdis.github.io/training-works-js/20211016-spd-trigonometry)
+| 20211023-spd-recursion      | SPD University: Рекурсивный обход списка    | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20211023-spd-recursion)      | —
+| 20211102-spd-linked-list    | SPD University: Связанные списки            | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20211102-spd-linked-list)    | —
+| 20220403-radency-notes      | Тестовое Radency: Заметки                   | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220403-radency-notes)      | [Demo](https://hisbvdis.github.io/training-works-js/20220403-radency-notes)
+| 20220826-kottans-solar      | Kottans Frontend: SPA Solaris               | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220826-kottans-solar)      | [Demo](https://hisbvdis.github.io/training-works-js/20220826-kottans-solar)
+| 20220830-kottans-memory     | Kottans Frontend: SPA Memory Pair Game      | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220830-kottans-memory)     | [Demo](https://hisbvdis.github.io/training-works-js/20220830-kottans-memory)
+| 20220831-kottans-friends    | Kottans Frontend: API Friends Application   | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220831-kottans-friends)    | [Demo](https://hisbvdis.github.io/training-works-js/20220831-kottans-friends)
+| 20220831-yandex-snake       | Яндекс ШРИ: Змейка                          | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220831-yandex-snake)       | —
+| 20220901-yandex-frames      | Яндекс ШРИ: Фоторамки                       | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220901-yandex-frames)      | [Demo](https://hisbvdis.github.io/training-works-js/20220901-yandex-frames)
+| 20220905-yandex-figma2html  | Яндекс ШРИ: Парсинг Figma                   | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220905-yandex-figma2html)  | [Demo](https://hisbvdis.github.io/training-works-js/20220905-yandex-figma2html)
+| 20220907-yandex-dragndrop   | Яндекс ШРИ: Drag and Drop                   | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220907-yandex-dragndrop)   | [Demo](https://hisbvdis.github.io/training-works-js/20220907-yandex-dragndrop)
+| 20220910-yandex-stylies     | Яндекс ШРИ: Каскадная стилизация CSS        | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220910-yandex-stylies)     | [Demo](https://hisbvdis.github.io/training-works-js/20220910-yandex-stylies)
+| 20220913-wr-transitland-api | Wikiroutes: GTFS-фиды в сайта Transit.land  | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220913-wr-transitland-api) | —
