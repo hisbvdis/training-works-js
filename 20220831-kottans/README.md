@@ -1,6 +1,6 @@
 # Задачи с курса "Kottans Frontend"
 
-| Project name                | Description                                 | Code                                                                                                         | Demo
+| Folder name                 | Task name                                   | Code                                                                                                         | Demo
 |-----------------------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------
 | 20220826-kottans-solar      | Kottans Frontend: SPA Solaris               | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220831-kottans/20220826-kottans-solar)      | [Demo](https://hisbvdis.github.io/training-works-js/20220831-kottans/20220826-kottans-solar)
 | 20220830-kottans-memory     | Kottans Frontend: SPA Memory Pair Game      | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20220831-kottans/20220830-kottans-memory)     | [Demo](https://hisbvdis.github.io/training-works-js/20220831-kottans/20220830-kottans-memory)

@@ -1,6 +1,6 @@
 # Вступительные задачи Яндекс "Intern Week"
 
-| Project name              | Description                     | Code                                                                                                                    | Demo
+| Folder name               | Task name                       | Code                                                                                                                    | Demo
 |---------------------------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------
 | 20221007-yandex-countdown | Обратный отсчёт                 | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20221007-yandex-intern-2022/20221007-yandex-countdown)   | —
 | 20221008-yandex-sum       | Сумма, кроме некоторых          | [Code](https://github.com/hisbvdis/training-works-js/tree/main/20221007-yandex-intern-2022/20221008-yandex-sum)         | —
